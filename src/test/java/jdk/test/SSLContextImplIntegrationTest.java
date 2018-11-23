@@ -21,5 +21,6 @@ public class SSLContextImplIntegrationTest {
         final InputStream is = clientSocket.getInputStream();
 
         is.read();
+        os.write(1);
     }
 }

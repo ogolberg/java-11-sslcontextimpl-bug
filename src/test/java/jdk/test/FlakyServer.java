@@ -22,10 +22,19 @@ public class FlakyServer {
 
         sock.getInputStream().read();
 
-        System.exit(1);
+        die();
+    }
+
+    private static void die() throws Exception {
+        String name = ManagementFactory.getRuntimeMXBean().getName();
+        int idx = name.indexOf("@");
+        String pid = name.substring(0, idx);
+        Runtime.getRuntime().exec(new String[] {"kill", "-9", pid});
     }
 
     public static int executeInNewJvm() throws Exception {
+
+
         final String javaExecutable = Arrays.asList(System.getProperty("java.home"), "bin", "java").stream().collect(joining(File.separator));
         final String classpath = ManagementFactory.getRuntimeMXBean().getClassPath();
 

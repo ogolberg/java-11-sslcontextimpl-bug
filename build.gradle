@@ -9,7 +9,7 @@ sourceCompatibility = 1.8
 
 test {
     testLogging {
-        events "passed", "skipped", "failed"
+        events "passed", "skipped", "failed", 'standard_out', 'standard_error'
         exceptionFormat "full"
     }
 }
