@@ -4,6 +4,6 @@ This project demonstrates a change in SSLContextImpl's behavior introduced in Ja
 
 On Java 10-, SSLContextImpl rethrows a SocketException.
 
-On Java 11, SSLContextImpl wraps a SocketExceptions in an SSLExceptions, typically an SSLProtocolException.
+On Java 11, SSLContextImpl wraps a SocketException in an SSLException, typically an SSLProtocolException.
 
 SSLContextImplIntegrationTest passes on Java 10- and fails on Java 11.
