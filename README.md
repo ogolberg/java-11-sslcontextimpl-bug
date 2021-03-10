@@ -6,4 +6,4 @@ On Java 8 before TLS1.3 (~ revision 161) SSLContextImpl rethrows a SocketExcepti
 
 See http://mail.openjdk.java.net/pipermail/jdk-dev/2018-November/002237.html, https://bugs.openjdk.java.net/browse/JDK-8237578, https://bugs.openjdk.java.net/browse/JDK-8214339.
 
-This project's SSLContextImplIntegrationTest passes on older Java 8 and a preview version of Java 17 and fails on newer Java 8 as well as Java 11 and 15. See [github actions build](actions/runs/640203948).
+This project's SSLContextImplIntegrationTest passes on older Java 8 and a preview version of Java 17 and fails on newer Java 8 as well as Java 11 and 15. See the [github actions build](https://github.com/ogolberg/java-11-sslcontextimpl-bug/actions/runs/640203948).
