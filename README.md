@@ -1,4 +1,4 @@
-# Java 11 SSLContextImpl [![Build Status](https://travis-ci.org/ogolberg/java-11-sslcontextimpl-bug.svg?branch=master)](https://travis-ci.org/ogolberg/java-11-sslcontextimpl-bug)
+# Java 11 SSLContextImpl
 
 This project demonstrates a change in SSLContextImpl's behavior introduced in Java 11. 
 
