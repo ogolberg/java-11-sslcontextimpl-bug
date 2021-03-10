@@ -11,11 +11,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
+        os: [ ubuntu-latest, macos-latest ]
         java: [ <8.0.161, 8, 11, 15, 17-ea ]
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
     - name: Set up java
