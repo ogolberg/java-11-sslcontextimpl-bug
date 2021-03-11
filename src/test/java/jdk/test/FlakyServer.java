@@ -29,7 +29,11 @@ public class FlakyServer {
         String name = ManagementFactory.getRuntimeMXBean().getName();
         int idx = name.indexOf("@");
         String pid = name.substring(0, idx);
-        Runtime.getRuntime().exec(new String[] {"kill", "-9", pid});
+        if (System.getProperty("os.name").toLowerCase().contains("win")) {
+            Runtime.getRuntime().exec(new String[] {"taskkill", "/F", "/PID", pid});
+        } else {
+            Runtime.getRuntime().exec(new String[] {"kill", "-9", pid});
+        }
     }
 
     public static int executeInNewJvm() throws Exception {
